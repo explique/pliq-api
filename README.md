@@ -28,4 +28,27 @@ Dica: quando estiver listando, você pode escolher os campos que deseja trazer e
 ### Como autenticar
 É necessário passar o token privado de autenticação para conseguir realizar as operações. Para conseguir esse token, acesse na PliQ a seção Companhia -> Integrações -> Tokens.
 
+### Códigos de respostas
 
+* 200 (application/json)
+> Sucesso
+
+* 401 (text/json)
+> Algum parâmetro enviado errado
+
+* 403 (text/json)
+> Acesso negado
+
+* 404 (text/json)
+> Registro não encontrado
+
+* 500 (text/json)
+> Erro do servidor
+
+### Seções (endpoints) disponíveis
+
+Segue as seções que você pode acessar pela API
+
+Principais:
+* Listagem de Pesquisas
+* Enviar Transmissão
