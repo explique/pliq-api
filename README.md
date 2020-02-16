@@ -16,4 +16,14 @@ ou
 
 https://sandboxapi.pliq.io/api/ (Para ambiente de sandbox)
 
+## Requisição HTTP
+Seguimos a estrutura padrão do estilo RESTful
 
+GET: lista ou consulta dados
+POST: criação de dados
+PUT: atualização de dados
+DELETE: remoção de dados
+Dica: quando estiver listando, você pode escolher os campos que deseja trazer enviando o parâmetro "attribute" na URL.
+
+### Como autenticar
+É necessário passar o token privado de autenticação para conseguir realizar as operações. Para conseguir esse token, acesse na PliQ a seção Companhia -> Tokens.
