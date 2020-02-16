@@ -26,4 +26,6 @@ DELETE: remoção de dados
 Dica: quando estiver listando, você pode escolher os campos que deseja trazer enviando o parâmetro "attribute" na URL.
 
 ### Como autenticar
-É necessário passar o token privado de autenticação para conseguir realizar as operações. Para conseguir esse token, acesse na PliQ a seção Companhia -> Tokens.
+É necessário passar o token privado de autenticação para conseguir realizar as operações. Para conseguir esse token, acesse na PliQ a seção Companhia -> Integrações -> Tokens.
+
+
