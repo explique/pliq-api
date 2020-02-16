@@ -45,6 +45,13 @@ Dica: quando estiver listando, você pode escolher os campos que deseja trazer e
 * 500 (text/json)
 > Erro do servidor
 
+### Padrão de endpoints
+
+```
+Para listagem, use GET: /endpoint/
+Para inserção, use POST: /endpoint/
+```
+
 ### Seções (endpoints) disponíveis
 
 Segue as seções que você pode acessar pela API
@@ -52,3 +59,9 @@ Segue as seções que você pode acessar pela API
 Principais:
 * Listagem de Pesquisas
 * Enviar Transmissão
+
+## Header
+A requisição deve conter:
+
+* Content-Type: application/json
+* Access-Token: SEU_TOKEN_AQUI
