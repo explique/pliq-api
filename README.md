@@ -64,14 +64,28 @@ Segue as seções que você pode acessar pela API
 
 #### Listar Pesquisas
 
-Para listar as pesquisas utilizaremos a seguinte configuração
-
 * O método usado será : 
 > GET
 * A URL usada será : 
 > <url_acesso>/survey/all
 
+Para listar as pesquisas utilizaremos a seguinte configuração.
+
 Esse método é responsável por listar todas as pesquisas, seus códigos e alguns detalhes, como por exemplo as perguntas usadas.
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
 
 ##### Retorno
 
