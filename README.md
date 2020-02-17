@@ -73,7 +73,25 @@ Para listar as pesquisas utilizaremos a seguinte configuração
 
 Esse método é responsável por listar todas as pesquisas, seus códigos e alguns detalhes, como por exemplo as perguntas usadas.
 
-Para pegar o código de uma pesquisa específica, deve-se primeiro listar todas as pesquisas e pegar o atributo "code" do retorno.
+##### Retorno
+
+```
+[
+    {
+        "title": "survey_title",
+        "description": "survey_description",
+        "code": "survey_code",
+        "active": "survey_active",
+        "createdat": "survey_createdat",
+        "questions": [
+            {
+                "title": "question_title",
+                "sequence": "question_sequence"
+            }
+        ]
+    }
+] 
+```
 
 #### Enviar Transmissão
 
@@ -100,3 +118,12 @@ Esse método é responsável por transmitir pesquisas, para uma determinada pesq
 	}
 }
 ```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/survey/all__.
+customer_name | String | Sim | Nome do cliente.
+customer_phone | String | Sim | Telefone do cliente.
