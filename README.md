@@ -95,14 +95,17 @@ Esse método é responsável por listar todas as pesquisas, seus códigos e algu
 
 #### Enviar Transmissão
 
-Para enviar a transmissão utilizaremos a seguinte configuração
-
 * O método usado será : 
 > POST
 * A URL usada será : 
 > <url_acesso>/survey/transmission
+Onde __survey_code__ é o código da pesquisa para qual você deseja disparar.
 
-Esse método é responsável por transmitir pesquisas, para uma determinada pesquisa a partir do seu código que foi identificado no método de Listagem de Pesquisas.
+Para enviar a transmissão utilizaremos a seguinte configuração.
+
+Esse método é responsável por transmitir para uma determinado contato a partir do seu código que foi identificado no método de Listagem de Pesquisas.
+
+O body deve ser preenchido usando o seguinte padrão:
 
 ```
 {
