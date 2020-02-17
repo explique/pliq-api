@@ -113,6 +113,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 > POST
 * A URL usada será : 
 > <url_acesso>/survey/transmission
+
 Onde __survey_code__ é o código da pesquisa para qual você deseja disparar.
 
 Para enviar a transmissão utilizaremos a seguinte configuração.
