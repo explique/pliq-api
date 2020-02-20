@@ -132,7 +132,10 @@ O body deve ser preenchido usando o seguinte padrão:
 	},
 	"Customer": {
 		"name": "customer_name",
-		"phone": "customer_phone"
+		"phone": "customer_phone",
+		"email": "customer_email",
+		"identification" : "customer_identification",
+		"state": "customer_state"
 	}
 }
 ```
@@ -144,4 +147,7 @@ Parâmetro | Tipo | Obrigatório | Descrição
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
 survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/survey/all__.
 customer_name | String | Sim | Nome do cliente.
-customer_phone | String | Sim | Telefone do cliente.
+customer_phone | String | Sim* | Telefone do cliente (obrigatório para transmissão via whatsapp).
+customer_email | String | Sim* | Email do cliente  (obrigatório para transmissão via email).
+customer_identification | String | Não| Chave de identificação do cliente na sua base de dados.
+customer_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
