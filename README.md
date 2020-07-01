@@ -14,7 +14,7 @@ https://api.pliq.io/api/ (Para clientes ambiente de produção)
 
 ou
 
-https://pliqapisandbox.azurewebsites.net/api/ (Para ambiente de sandbox)
+https://csxdemoapi.azurewebsites.net/api/ (Para ambiente de sandbox)
 
 ## Requisição HTTP
 Seguimos a estrutura padrão do estilo RESTful
