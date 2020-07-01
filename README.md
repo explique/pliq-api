@@ -112,7 +112,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > POST
 * A URL usada será : 
-> <url_acesso>/survey/transmission
+> <url_acesso>/surveys/transmission
 
 Onde __survey_code__ é o código da pesquisa para qual você deseja disparar.
 
@@ -136,7 +136,8 @@ O body deve ser preenchido usando o seguinte padrão:
 		"email": "customer_email",
 		"identification" : "customer_identification",
 		"state": "customer_state"
-	}
+	},
+	"Schedule_Time": Timestamp_in_seconds
 }
 ```
 
