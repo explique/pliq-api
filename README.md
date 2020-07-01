@@ -124,6 +124,8 @@ O Exemplo a seguir mostra a inserção com todas as variáveis, mas existe casos
 
 Ex: Caso a transmissão seja via WhatsApp, não é necessário enviar o email se desejar transmissão somente via email a variável phone não precisa ser enviada e caso seja uma transmissão automaticamente nos 2 (dois) canais, é necessário enviar phone e email.
 
+O envio de identification é opcional, porém, recomendado caso deseje identificar o cliente pelo mesmo parâmetro da sua empresa. O identification precisa ser um valor único para cada cliente. Se trata de um valor alfanumérico, passado entre aspas. Caso não seja utilizado, deve ser enviado null, sem aspas.
+
 O body deve ser preenchido usando o seguinte padrão:
 
 ```
