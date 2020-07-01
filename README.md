@@ -67,7 +67,7 @@ Segue as seções que você pode acessar pela API
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/survey/all
+> <url_acesso>/surveys/all
 
 Para listar as pesquisas utilizaremos a seguinte configuração.
 
