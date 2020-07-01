@@ -153,11 +153,11 @@ Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
 survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
-customer_name | String | Sim | Nome do cliente.
-customer_phone | String | Sim* | Telefone do cliente (obrigatório para transmissão via whatsapp).
-customer_email | String | Sim* | Email do cliente  (obrigatório para transmissão via email).
-customer_identification | String | Não| Chave de identificação do cliente na sua base de dados.
-customer_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
+customers_name | String | Sim | Nome do cliente.
+customers_phone | String | Sim* | Telefone do cliente (obrigatório para transmissão via whatsapp).
+customers_email | String | Sim* | Email do cliente  (obrigatório para transmissão via email).
+customers_identification | String | Não| Chave de identificação do cliente na sua base de dados.
+customers_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
 schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
 
 ##### Retorno
