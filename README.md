@@ -152,3 +152,4 @@ customer_phone | String | Sim* | Telefone do cliente (obrigatório para transmis
 customer_email | String | Sim* | Email do cliente  (obrigatório para transmissão via email).
 customer_identification | String | Não| Chave de identificação do cliente na sua base de dados.
 customer_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
+schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
