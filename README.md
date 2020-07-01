@@ -153,3 +153,14 @@ customer_email | String | Sim* | Email do cliente  (obrigatório para transmiss�
 customer_identification | String | Não| Chave de identificação do cliente na sua base de dados.
 customer_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
 schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
+
+##### Retorno
+
+```
+[
+    {
+        "message": "Customers have been successfully added!",
+        "survey_code": "survey_code",
+    }
+] 
+```
