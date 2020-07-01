@@ -122,7 +122,7 @@ Esse método é responsável por transmitir para uma determinado contato a parti
 
 O Exemplo a seguir mostra a inserção com todas as variáveis, mas existe casos em que as variáveis indentification, phone e email podem ser omitidas.
 
-Ex: Caso a transmissão seja via WhatsApp, não é necessário enviar o email, mas ele ainda pode ser enviado. Se desejar transmissão somente via email a variável phone não precisa ser enviada, mas caso seja necessário, existe a possibilidade de enviá-la.
+Ex: Caso a transmissão seja via WhatsApp, não é necessário enviar o email se desejar transmissão somente via email a variável phone não precisa ser enviada e caso seja uma transmissão automaticamente nos 2 (dois) canais, é necessário enviar phone e email.
 
 O body deve ser preenchido usando o seguinte padrão:
 
