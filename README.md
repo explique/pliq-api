@@ -130,13 +130,13 @@ O body deve ser preenchido usando o seguinte padrão:
 	"Survey": {
 		"code": "survey_code"
 	},
-	"Customer": {
+	"Customers": [{
 		"name": "customer_name",
 		"phone": "customer_phone",
 		"email": "customer_email",
 		"identification" : "customer_identification",
 		"state": "customer_state"
-	},
+	}],
 	"Schedule_Time": Timestamp_in_seconds
 }
 ```
@@ -160,7 +160,8 @@ schedule_time | Integer | Não | Tempo que a transmissão será realizada, em se
 [
     {
         "message": "Customers have been successfully added!",
-        "survey_code": "survey_code",
+        "survey_title": "survey_title",
+	"survey_code": "survey_code",
     }
 ] 
 ```
