@@ -120,6 +120,10 @@ Para enviar a transmissão utilizaremos a seguinte configuração.
 
 Esse método é responsável por transmitir para uma determinado contato a partir do seu código que foi identificado no método de Listagem de Pesquisas.
 
+O Exemplo a seguir mostra a inserção com todas as variáveis, mas existe casos em que as variáveis indentification, phone e email podem ser omitidas.
+
+Ex: Caso a transmissão seja via WhatsApp, não é necessário enviar o email, mas ele ainda pode ser enviado. Se desejar transmissão somente via email a variável phone não precisa ser enviada, mas caso seja necessário, existe a possibilidade de enviá-la.
+
 O body deve ser preenchido usando o seguinte padrão:
 
 ```
@@ -146,7 +150,7 @@ Parâmetros
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
-survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/survey/all__.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
 customer_name | String | Sim | Nome do cliente.
 customer_phone | String | Sim* | Telefone do cliente (obrigatório para transmissão via whatsapp).
 customer_email | String | Sim* | Email do cliente  (obrigatório para transmissão via email).
