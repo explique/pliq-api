@@ -161,7 +161,7 @@ schedule_time | Integer | Não | Tempo que a transmissão será realizada, em se
     {
         "message": "Customers have been successfully added!",
         "survey_title": "survey_title",
-	"survey_code": "survey_code",
+	"survey_code": "survey_code"
     }
 ] 
 ```
