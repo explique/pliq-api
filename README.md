@@ -171,3 +171,51 @@ schedule_time | Integer | Não | Tempo que a transmissão será realizada, em se
     }
 ] 
 ```
+
+#### Inserir Respostas
+Fornecemos também um método de inserção de respostas. Esse método pode ser utilizado com os seguintes parâmetros.
+O método será:POST
+A URL a ser usada deve ser: __<url_acesso>/surveys/answer__
+O body deve ser preenchido com o lote de respostas usando o seguinte padrão
+
+```
+{
+	"Token": {
+		"code": "token_code"
+	},
+	"Survey": {
+		"code": "survey_code"
+	},
+	"Answers": [{
+		"name": "customer_name",
+		"participant_key": "customer_phone ou customer_email",
+		"name_key": "name_key",
+		"nps_value": "nps_value",
+		"nps_feedback": "nps_feedback",
+		"respondedat": "respondedat"
+	}]
+}	
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
+customer_name | String | Sim | Nome do cliente.
+customer_phone | String | Sim* | Telefone do cliente (obrigatório para resposta via telefone).
+customer_email | String | Sim* | Email do cliente  (obrigatório para resposta via email).
+name_key | String | Sim | Obritatóriamente deve ser informado (phone ou email) dependendo do tipo de resposta.
+nps_value | Integer | Sim | Score do cliente (entre 0 e 10).
+nps_feedback | String | Não | Comentário do cliente.
+respondedat | String | Sim | Data/hora da resposta no padrão timestamp.
+
+Exemplo de retorno:
+```
+{
+    "message": "Number_of_answers Answer inserted!",
+    "status_invalid": "Number_of_answers_invalid",
+    "status_inserted": "Number_of_answers_inserted"
+}
+```
