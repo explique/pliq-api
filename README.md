@@ -174,8 +174,11 @@ schedule_time | Integer | Não | Tempo que a transmissão será realizada, em se
 
 #### Inserir Respostas
 Fornecemos também um método de inserção de respostas. Esse método pode ser utilizado com os seguintes parâmetros.
+
 O método será:POST
+
 A URL a ser usada deve ser: __<url_acesso>/surveys/answer__
+
 O body deve ser preenchido com o lote de respostas usando o seguinte padrão
 
 ```
