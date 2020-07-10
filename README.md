@@ -62,7 +62,7 @@ A requisição deve conter:
 
 Segue as seções que você pode acessar pela API
 
-#### Listar Pesquisas
+### Listar Pesquisas
 
 * O método usado será : 
 > GET
@@ -107,7 +107,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 ] 
 ```
 
-#### Enviar Transmissão
+### Enviar Transmissão
 
 * O método usado será : 
 > POST
@@ -162,7 +162,7 @@ customers_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: 
 schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
 tags | Array<String> | Não | Informe a listagem das Tags.
 
-##### Retorno
+#### Retorno
 
 ```
 [
@@ -174,7 +174,7 @@ tags | Array<String> | Não | Informe a listagem das Tags.
 ] 
 ```
 
-#### Inserir Respostas
+### Inserir Respostas
 Fornecemos também um método de inserção de respostas. Esse método pode ser utilizado com os seguintes parâmetros.
 
 O método será:POST
