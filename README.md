@@ -10,11 +10,11 @@ Nota: Qualquer erro ou sugestão, por favor nos contate.
 
 ### URL de acesso
 
-https://api.pliq.io/api/ (Para clientes ambiente de produção)
+https://api.pliq.io/api/v1 (Para clientes ambiente de produção)
 
 ou
 
-https://csxdemoapi.azurewebsites.net/api/ (Para ambiente de sandbox)
+https://csxdemoapi.azurewebsites.net/api/v1 (Para ambiente de sandbox)
 
 ## Requisição HTTP
 Seguimos a estrutura padrão do estilo RESTful
@@ -141,7 +141,8 @@ O body deve ser preenchido usando o seguinte padrão:
 		"phone": "customer_phone",
 		"email": "customer_email",
 		"identification" : "customer_identification",
-		"state": "customer_state"
+		"state": "customer_state",
+		"tags": ["tags1", "tags2", "tagsN"]		
 	}],
 	"Schedule_Time": Timestamp_in_seconds
 }
@@ -159,6 +160,7 @@ customers_email | String | Sim* | Email do cliente  (obrigatório para transmiss
 customers_identification | String | Não| Chave de identificação do cliente na sua base de dados.
 customers_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
 schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
+tags | Array<String> | Não | Informe a listagem das Tags.
 
 ##### Retorno
 
@@ -195,7 +197,8 @@ O body deve ser preenchido com o lote de respostas usando o seguinte padrão
 		"name_key": "name_key",
 		"nps_value": "nps_value",
 		"nps_feedback": "nps_feedback",
-		"respondedat": "respondedat"
+		"respondedat": "respondedat",
+		"tags": ["tags1", "tags2", "tagsN"]		
 	}]
 }	
 ```
@@ -213,6 +216,7 @@ name_key | String | Sim | Obritatóriamente deve ser informado (phone ou email) 
 nps_value | Integer | Sim | Score do cliente (entre 0 e 10).
 nps_feedback | String | Não | Comentário do cliente.
 respondedat | String | Sim | Data/hora da resposta no padrão timestamp.
+tags | Array<String> | Não | Informe a listagem das Tags.
 
 Exemplo de retorno:
 ```
