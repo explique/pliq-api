@@ -10,11 +10,11 @@ Nota: Qualquer erro ou sugestão, por favor nos contate.
 
 ### URL de acesso
 
-https://api.pliq.io/api/v1 (Para clientes ambiente de produção)
+https://api.pliq.io/v1/api (Para clientes ambiente de produção)
 
 ou
 
-https://csxdemoapi.azurewebsites.net/api/v1 (Para ambiente de sandbox)
+https://csxdemoapi.azurewebsites.net/v1/api (Para ambiente de sandbox)
 
 ## Requisição HTTP
 Seguimos a estrutura padrão do estilo RESTful
