@@ -130,13 +130,13 @@ O body deve ser preenchido usando o seguinte padrão:
 
 ```
 {
-	"Token": {
+	"token": {
 		"code": "token_code"
 	},
-	"Survey": {
+	"survey": {
 		"code": "survey_code"
 	},
-	"Customers": [{
+	"customers": [{
 		"name": "customer_name",
 		"phone": "customer_phone",
 		"email": "customer_email",
@@ -144,7 +144,7 @@ O body deve ser preenchido usando o seguinte padrão:
 		"state": "customer_state",
 		"tags": ["tags1", "tags2", "tagsN"]		
 	}],
-	"Schedule_Time": Timestamp_in_seconds
+	"schedule_Time": Timestamp_in_seconds
 }
 ```
 
@@ -185,13 +185,13 @@ O body deve ser preenchido com o lote de respostas usando o seguinte padrão
 
 ```
 {
-	"Token": {
+	"token": {
 		"code": "token_code"
 	},
-	"Survey": {
+	"survey": {
 		"code": "survey_code"
 	},
-	"Answers": [{
+	"answers": [{
 		"name": "customer_name",
 		"participant_key": "customer_phone ou customer_email",
 		"name_key": "name_key",
