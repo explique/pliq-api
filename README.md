@@ -1,7 +1,7 @@
 # pliq-api
 https://www.pliq.io
 
-Esse é um repositório para auxílio na API PliQ - Experiência, Satisfação e Fidelização de Clientes.
+Esse é um repositório para auxílio na API PliQ - Experiência e Fidelização de Clientes.
 
 Colocaremos materiais e webhooks para que a integração seja facilitada.
 Nota: Qualquer erro ou sugestão, por favor nos contate.
