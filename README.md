@@ -240,14 +240,14 @@ O body deve ser preenchido usando o seguinte padrão
 ```
 {
 	"token": {
-		"code": "7cb72866-8fc2-4e5a-8428-bdea2b55295c"
+		"code": "token_code"
 	},
 	"survey": {
-		"code": "fb7b9ffa5462084c5f4e7e85a093e6d7"
+		"code": "survey_code"
 	},
 	"contact":{
-        	"email": "denisebarrosoq1986@gmail.com",
-        	"phone": "(85)98803-1979"
+        	"email": "contact_email",
+        	"phone": "contact_phone"
     	}
 }
 ```
