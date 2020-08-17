@@ -226,3 +226,67 @@ Exemplo de retorno:
     "status_inserted": "Number_of_answers_inserted"
 }
 ```
+
+
+### Visualizar Respostas
+Fornecemos também um método de visualização de respostas por contato. Esse método pode ser utilizado com os seguintes parâmetros.
+
+O método será: GET
+
+A URL a ser usada deve ser: __<url_acesso>/surveys/feedback__
+
+O body deve ser preenchido usando o seguinte padrão
+
+```
+{
+	"token": {
+		"code": "7cb72866-8fc2-4e5a-8428-bdea2b55295c"
+	},
+	"survey": {
+		"code": "fb7b9ffa5462084c5f4e7e85a093e6d7"
+	},
+	"contact":{
+        	"email": "denisebarrosoq1986@gmail.com",
+        	"phone": "(85)98803-1979"
+    	}
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
+contact_email | String | Sim* | Email do contato  (obrigatório para resposta via email).
+contact_phone | String | Sim* | Telefone do contato (obrigatório para resposta via telefone).
+
+Exemplo de retorno:
+```
+[
+    {
+        "id_company": "company_id",
+        "full_name": "company_fullname",
+        "id_survey": "survey_id",
+        "url_survey": "survey_code",
+        "type_survey": "type_survey",
+        "type_survey_label": "type_survey_label",
+        "fk_survey_sample": "type_survey_sample",
+        "title": "survey_title",
+        "description": "survey_description",
+        "id_survey_response": "survey_response_id",
+        "participant_key": "participant_key",
+        "abandonment": "abandonment",
+        "closed_loop": "closes_loop",
+        "name": "contact_name",
+        "name_key": "contact_name_key",
+        "respondedat": "survey_response_data",
+        "createdat": "survey_response_created",
+        "sendedat": "survey_response_send",
+        "tags": "survey_response_tags",
+        "referral_share_code": "referral_share_code",
+        "nps_value": "nps_value",
+        "nps_feedback": "nps_feedback"
+    }
+]
+```
