@@ -309,10 +309,10 @@ O body deve ser preenchido com o feedback que receberá o feedback usando o segu
 		"code": "survey_code"
 	},
 	"feedback": {
-		"id": "customer_name",
-		"user_name": "customer_phone ou customer_email",
-		"response_callback": "name_key",
-		"closeloop": "nps_value"
+		"id": "feedback_id",
+		"user_name": "user_name",
+		"response_callback": "response_callback",
+		"closeloop": "closeloop"
 	}
 }	
 ```
