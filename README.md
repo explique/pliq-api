@@ -290,3 +290,52 @@ Exemplo de retorno:
     }
 ]
 ```
+
+### Inserir Histórico e Fechamento de Loop
+Fornecemos também um método de inserção de históricos e fechamento de loop. Esse método pode ser utilizado com os seguintes parâmetros.
+
+O método será:POST
+
+A URL a ser usada deve ser: __<url_acesso>/surveys/history__
+
+O body deve ser preenchido com o feedback que receberá o feedback usando o seguinte padrão
+
+```
+{
+	"token": {
+		"code": "token_code"
+	},
+	"survey": {
+		"code": "survey_code"
+	},
+	"feedback": {
+		"id": "customer_name",
+		"user_name": "customer_phone ou customer_email",
+		"response_callback": "name_key",
+		"closeloop": "nps_value"
+	}
+}	
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
+feedback_id | Integer | Sim | Número da chave do feedback do cliente.
+user_name | String | Sim | Nome do usuário que está registrando o histórico.
+response_callback | String | Sim | Texto que será enviado para histórico/fechamento de loop.
+closeloop | Boolean | Sim | Informe true caso deseje fechar o loop e false caso deseje registrar histório mas deixar ainda em aberto o feedback.
+
+Exemplo de retorno:
+```
+{
+    "id_history": "Número do histórico gerado.",
+    "fk_survey_response": "Número do feedback_id",
+    "response_callback": "Texto gerado pelo histórico.",
+    "user_name": "Nome do usuário que registrou o histórico.",
+    "historydat": "Data e hora do registro do histórico",
+    "surveyResponses": "Mais informações do feedback",
+    "closeLoop": "Informação de fechamento de loop"
+}```
