@@ -144,7 +144,8 @@ O body deve ser preenchido usando o seguinte padrão:
 		"state": "customer_state",
 		"tags": ["tags1", "tags2", "tagsN"]		
 	}],
-	"schedule_Time": Timestamp_in_seconds
+	"schedule_Time": Timestamp_in_seconds,
+	"channels": ["email", "whatsapp"]
 }
 ```
 
