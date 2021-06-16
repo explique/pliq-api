@@ -2,7 +2,15 @@
 
 Esse link tem o objetivo de explicar como usar a integração da PliQ via script.
 
-Serão necessários 3 passos.
+## Exemplo de uma integração via PluginJS funcionando
+
+Para ver o funcionamento de um exemplo clique no link a seguir: https://www.pliq.io/teste-pluginjs/
+
+### Vídeo explicativo
+
+Para ver um vídeo explicando a configuração do plugin em uma página no wordpress clique: https://www.loom.com/share/0de9d903744f409f8c3726417b66fa5d
+
+**Serão necessários 3 passos.**
 
 1. Ter uma conta contratada na PliQ.
 2. Criar sua pesquisa que vai ser utilizada nessa integração
@@ -78,11 +86,3 @@ Esse script deve ser colocado dentro de sua página web ou webapp.
 **key** 
 
 É o objeto web dentro de seu sistema web, webapp ou CSM como wordpress. Esse objeto deve conter a informação do email do cliente que normalmente faz login no seu sistema.
-
-## Exemplo de uma integração via PluginJS funcionando
-
-Para ver o funcionamento de um exemplo clique no link a seguir: https://www.pliq.io/teste-pluginjs/
-
-**Vídeo explicativo**
-
-Para ver um vídeo explicando a configuração do plugin em uma página no wordpress clique: 
