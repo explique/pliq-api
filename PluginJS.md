@@ -30,14 +30,27 @@ Ao acessar a comunicação escolha a aba Popup, conforme imagem a seguir.
 
 ### Dados importantes para o uso do PluginJS
 
-*Url de exibição* 
+**Url de exibição** 
+
 Caminho no sistema onde será gerado o gatilho para disparo da pesquisa.
+
 É permitido o uso de código Regex ou link direto.
 
 Exemplo: 
+
 Link direto: https://app.pliq.io/home, 
+
 Código regex: 
 
 
-*Url de exibição* 
+**Quantidade de exibições do modal** 
 
+Quantas vezes o modal popup deverá aparecer para o cliente até que ele responda a pesquisa.
+
+Exemplo: 3 vezes
+
+**Tempo para o modal ser exibido** 
+
+Quantos segundos o plugin deverá esperar até que ele apresente o modal para o cliente responder a pesquisa.
+
+Exemplo: 5 segundos
