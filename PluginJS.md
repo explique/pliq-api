@@ -54,3 +54,35 @@ Exemplo: 3 vezes
 Quantos segundos o plugin deverá esperar até que ele apresente o modal para o cliente responder a pesquisa.
 
 Exemplo: 5 segundos
+
+## Script URL
+
+Esse script deve ser colocado dentro de sua página web ou webapp. 
+
+```
+<script>
+(function (p, l, i, q, j, s) {
+     p._pliqStt={ surveyUrl: '<Token da sua pesquisa aqui>', key: '<Id do objeto aqui>'};
+     j=l.getElementsByTagName('head')[0];s=l.createElement('script');
+     s.async=1;s.src=i+q.split(';')[0];j.appendChild(s);
+     s=l.createElement('link');s.rel='stylesheet';s.href=i+q.split(';')[1];j.appendChild(s);
+})(window, document, 'https://pliqdrive.blob.core.windows.net/sandbox/App/Plugin/app', '.js;.css');
+</script>
+```
+
+**surveyUrl** 
+
+É o token que é gerado automaticamente pela PliQ que identifica de forma única cada pesquisa. 
+
+
+**key** 
+
+É o objeto web dentro de seu sistema web, webapp ou CSM como wordpress. Esse objeto deve conter a informação do email do cliente que normalmente faz login no seu sistema.
+
+## Exemplo de uma integração via PluginJS funcionando
+
+Para ver o funcionamento de um exemplo clique no link a seguir: https://www.pliq.io/teste-pluginjs/
+
+**Vídeo explicativo**
+
+Para ver um vídeo explicando a configuração do plugin em uma página no wordpress clique: 
