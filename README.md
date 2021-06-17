@@ -145,7 +145,12 @@ O body deve ser preenchido usando o seguinte padrão:
 		"tags": ["tags1", "tags2", "tagsN"]		
 	}],
 	"schedule_Time": Timestamp_in_seconds,
-	"channels": ["email", "whatsapp"]
+	"channels": {
+		"email": bool,
+		"sms": bool,
+		"whatsapp": bool,
+		"popup" : bool
+	}
 }
 ```
 
@@ -162,6 +167,7 @@ customers_identification | String | Não| Chave de identificação do cliente na
 customers_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
 schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
 tags | Array<String> | Não | Informe a listagem das Tags.
+channels | Object | Informe os canais que deseja que a transmissão seja realizada, marque true para todas que deseja.	
 
 #### Retorno
 
