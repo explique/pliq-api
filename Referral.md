@@ -108,7 +108,17 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 
 ### Listar Membros do Programa
 
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/referral_program/members
+
 ### Listar Indicações do Programa
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/referral_program/referrals
 
 ### Negar Indicação 
 
@@ -128,9 +138,9 @@ O body deve ser preenchido usando o seguinte padrão:
 		"id": "referral_share_id",    
 		"member_code": "referral_member_code",            
 		"referral_program_id": "referral_program_id",
-        "status_lost": "referral_status_lost",
-        "details": "referral_details",
-        "createdat": "referral_createdat"
+        	"status_lost": "referral_status_lost",
+        	"details": "referral_details",
+        	"createdat": "referral_createdat"
 	}
 }
 ```
