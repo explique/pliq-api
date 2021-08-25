@@ -66,7 +66,7 @@ Segue as seções que você pode acessar pela API
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referral/all
+> <url_acesso>/referral_program/all
 
 Para listar os programas de indicação utilizaremos a seguinte configuração.
 
@@ -91,12 +91,13 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 ```
 [
     {
+        "id": "referral_id",
         "name": "referral_name",
         "coin_name": "referral_coin_name",
         "active": "referral_active",
         "startdate": "referral_startdate",
         "enddate": "referral_enddate",
-        "urlprogram": "referral_urlprogram",
+        "url_program": "referral_url_program",
         "enddate": "referral_enddate",
         "language": "referral_language",     
         "url_photo": "referral_url_photo",     
@@ -115,6 +116,34 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 > POST
 * A URL usada será : 
 > <url_acesso>/referral/deny
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+	"token": {
+		"code": "token_code"
+	},
+	"referral_share": {
+		"id": "referral_share_id",    
+		"member_code": "referral_member_code",            
+		"referral_program_id": "referral_program_id",
+        "status_lost": "referral_status_lost",
+        "details": "referral_details",
+        "createdat": "referral_createdat"
+	}
+}
+```
+
+#### Retorno
+
+```
+[
+    {
+        "message": "Success"
+    }
+] 
+```
 
 ### Aprovar Indicação
 
