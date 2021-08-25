@@ -60,3 +60,65 @@ A requisição deve conter:
 ### Seções (endpoints) disponíveis
 
 Segue as seções que você pode acessar pela API
+
+### Listar Programas de Indicação
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/referral/all
+
+Para listar os programas de indicação utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todos os programas de indicação.
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+
+##### Retorno
+
+```
+[
+    {
+        "name": "referral_name",
+        "coin_name": "referral_coin_name",
+        "active": "referral_active",
+        "startdate": "referral_startdate",
+        "enddate": "referral_enddate",
+        "urlprogram": "referral_urlprogram",
+        "enddate": "referral_enddate",
+        "language": "referral_language",     
+        "url_photo": "referral_url_photo",     
+        "url_banner": "referral_url_banner"
+    }
+] 
+```
+
+### Listar Membros do Programa
+
+### Listar Indicações do Programa
+
+### Negar Indicação 
+
+* O método usado será : 
+> POST
+* A URL usada será : 
+> <url_acesso>/referral/deny
+
+### Aprovar Indicação
+
+* O método usado será : 
+> POST
+* A URL usada será : 
+> <url_acesso>/referral/approve
