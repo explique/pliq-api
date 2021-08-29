@@ -127,18 +127,23 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/pipelines/stages/?pipeline_internal_id=
+> <url_acesso>/products/all
+
+Para listar os produtos utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todos os produtos.
 
 #### Retorno
 
 ```
 [
     {
-        "id": "stage_id",
-        "name": "stage_name",
-        "internal_id": "stage_internal_id",
-	"win_probability": "stage_win_probability",
-	"sequence": "stage_sequence"
+        "id": "product_id",
+        "name": "product_name",
+        "sku": "product_sku",
+	"price": "product_price",
+	"commission_amount": "product_commission_amount",
+	"commission_percentage": "product_commission_amount"
     }
 ] 
 ```
@@ -150,6 +155,10 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 > GET
 * A URL usada será : 
 > <url_acesso>/pipelines/all
+
+Para listar todos os pipelines utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todos os pipelines.
 
 #### Retorno
 
@@ -169,6 +178,10 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 > GET
 * A URL usada será : 
 > <url_acesso>/pipelines/stages/?pipeline_internal_id=
+
+Para listar as fases de um pipeline utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todas fases de um pipeline.
 
 #### Retorno
 
