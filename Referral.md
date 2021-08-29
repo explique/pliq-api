@@ -120,12 +120,53 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * A URL usada será : 
 > <url_acesso>/referral_program/referrals
 
+
+### Listar Pipelines
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/pipelines/all
+
+#### Retorno
+
+```
+[
+    {
+        "id": "pipeline_id",
+        "name": "pipeline_name",
+        "internal_id": "pipeline_internal_id"
+    }
+] 
+```
+
+### Listar Stages of Pipeline
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/pipelines/stages/?pipeline_internal_id=
+
+#### Retorno
+
+```
+[
+    {
+        "id": "stage_id",
+        "name": "stage_name",
+        "internal_id": "stage_internal_id",
+	"win_probability": "stage_win_probability",
+	"sequence": "stage_sequence"
+    }
+] 
+```
+
 ### Negar Indicação 
 
 * O método usado será : 
 > POST
 * A URL usada será : 
-> <url_acesso>/referral/deny
+> <url_acesso>/referral_program/referral/changestatus
 
 O body deve ser preenchido usando o seguinte padrão:
 
@@ -138,6 +179,7 @@ O body deve ser preenchido usando o seguinte padrão:
 		"id": "referral_share_id",    
 		"member_code": "referral_member_code",            
 		"referral_program_id": "referral_program_id",
+		"stage_id": "stage_id",
         	"status_lost": "referral_status_lost",
         	"details": "referral_details",
         	"createdat": "referral_createdat"
@@ -148,11 +190,9 @@ O body deve ser preenchido usando o seguinte padrão:
 #### Retorno
 
 ```
-[
-    {
-        "message": "Success"
-    }
-] 
+{
+	"message": "Success"
+}
 ```
 
 ### Aprovar Indicação
@@ -160,4 +200,4 @@ O body deve ser preenchido usando o seguinte padrão:
 * O método usado será : 
 > POST
 * A URL usada será : 
-> <url_acesso>/referral/approve
+> <url_acesso>/referral_program/referral/approve
