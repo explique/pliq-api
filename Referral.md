@@ -238,6 +238,43 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 ] 
 ```
 
+### Listar Status de Motivo de Perda de Negócio
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/status_lost/all
+
+Para listar os status de motivo de perda de negócio utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todos os  motivos de perda de negócio.
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+
+#### Retorno
+
+```
+[
+    {
+        "id": "status_lost_id",
+        "name": "status_lost_name",
+        "internal_id": "status_lost_internal_id"
+    }
+] 
+```
+
 ### Mudar Status da Indicação 
 
 * O método usado será : 
