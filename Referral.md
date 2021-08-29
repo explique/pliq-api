@@ -133,6 +133,20 @@ Para listar os produtos utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os produtos.
 
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+
 #### Retorno
 
 ```
@@ -148,7 +162,6 @@ Esse método é responsável por listar todos os produtos.
 ] 
 ```
 
-
 ### Listar Pipelines
 
 * O método usado será : 
@@ -159,6 +172,20 @@ Esse método é responsável por listar todos os produtos.
 Para listar todos os pipelines utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os pipelines.
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
 
 #### Retorno
 
@@ -183,6 +210,20 @@ Para listar as fases de um pipeline utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todas fases de um pipeline.
 
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+
 #### Retorno
 
 ```
@@ -197,7 +238,7 @@ Esse método é responsável por listar todas fases de um pipeline.
 ] 
 ```
 
-### Negar Indicação 
+### Mudar Status da Indicação 
 
 * O método usado será : 
 > POST
