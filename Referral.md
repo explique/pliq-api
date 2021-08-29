@@ -99,6 +99,8 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "enddate": "referral_enddate",
         "url_program": "referral_url_program",
         "enddate": "referral_enddate",
+	"pipeline": "referral_pipeline",
+	"pipeline_internal_id": "referral_pipeline_internal_id",
         "language": "referral_language",     
         "url_photo": "referral_url_photo",     
         "url_banner": "referral_url_banner"
@@ -120,6 +122,27 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * A URL usada será : 
 > <url_acesso>/referral_program/referrals
 
+### Listar Produtos
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/pipelines/stages/?pipeline_internal_id=
+
+#### Retorno
+
+```
+[
+    {
+        "id": "stage_id",
+        "name": "stage_name",
+        "internal_id": "stage_internal_id",
+	"win_probability": "stage_win_probability",
+	"sequence": "stage_sequence"
+    }
+] 
+```
+
 
 ### Listar Pipelines
 
@@ -140,7 +163,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 ] 
 ```
 
-### Listar Stages of Pipeline
+### Listar as fases do Pipeline
 
 * O método usado será : 
 > GET
@@ -179,7 +202,7 @@ O body deve ser preenchido usando o seguinte padrão:
 		"id": "referral_share_id",    
 		"member_code": "referral_member_code",            
 		"referral_program_id": "referral_program_id",
-		"stage_id": "stage_id",
+		"stage_internal_id": "stage_internal_id",
         	"status_lost": "referral_status_lost",
         	"details": "referral_details",
         	"createdat": "referral_createdat"
