@@ -113,21 +113,21 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referral_program/members
+> <url_acesso>/referral_program/member/all
 
 ### Listar Indicações do Programa
 
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referral_program/referrals
+> <url_acesso>/referral_program/referral/all
 
 ### Listar Produtos
 
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/products/all
+> <url_acesso>/product/all
 
 Para listar os produtos utilizaremos a seguinte configuração.
 
@@ -167,7 +167,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/pipelines/all
+> <url_acesso>/pipeline/all
 
 Para listar todos os pipelines utilizaremos a seguinte configuração.
 
@@ -204,7 +204,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/pipelines/stages/?pipeline_internal_id=
+> <url_acesso>/pipeline/stage/?pipeline_internal_id=
 
 Para listar as fases de um pipeline utilizaremos a seguinte configuração.
 
@@ -280,7 +280,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > POST
 * A URL usada será : 
-> <url_acesso>/referral_program/referral/changestatus
+> <url_acesso>/referral_program/referral/stage_change
 
 O body deve ser preenchido usando o seguinte padrão:
 
@@ -296,7 +296,12 @@ O body deve ser preenchido usando o seguinte padrão:
 		"stage_internal_id": "stage_internal_id",
         	"status_lost_internal_id": "referral_status_lost_internal_id",
         	"details": "referral_details",
-        	"createdat": "referral_createdat"
+        	"createdat": "referral_createdat",
+		"products": [{
+			"sku": "product_sku",
+			"price": "product_price",
+			"quantity": "product_quantity"		
+		}]
 	}
 }
 ```
@@ -306,12 +311,17 @@ Parâmetros
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+referral_share_id | String | Sim | Chave da indicação. Obtida no método __<url_acesso>/referral_program/referral/all__.
 referral_program_id | String | Sim | Chave do programa de indicação. Obtida no método __<url_acesso>/referral_program/all__.
-member_code | String | Sim | Chave do membro. Obtida no método __<url_acesso>/referral_program/members/all__.
-stage_internal_id | String | Sim | Chave da fase. Obtida no método __<url_acesso>/pipelines/stages/?pipeline_internal_id=__.
-status_lost_internal_id | String | Não | Chave do status de perda do negócio via indicação. Obtida no método __<url_acesso>/status_lost/all__.
+member_code | String | Sim | Chave do membro. Obtida no método __<url_acesso>/referral_program/member/all__.
+stage_internal_id | String | Sim | Chave da fase. Obtida no método __<url_acesso>/pipeline/stage/?pipeline_internal_id=__.
+status_lost_internal_id | String | Sim* | Em caso de fase onde o negócio foi perdido. Chave do status de perda do negócio via indicação. Obtida no método __<url_acesso>/status_lost/all__.
 details | String | Não | Detalhes sobre o motino do negócio da indicação perdida.
 createdat | Timestamp | Não | Data que ocorreu a mudança de fase da indicação.
+products | Array<object> | Sim* | Em caso de fase onde onde o negócio foi realizado.
+product_sku | String | Sim* | Código do produto ou serviço que foi realizado o negócio.	
+product_price | String | Sim* | Valor do produto ou serviço que foi realizado o negócio.
+product_quantity | String | Sim* | Quantidade do produto ou serviço que foi realizado o negócio.
 
 #### Retorno
 
@@ -320,10 +330,3 @@ createdat | Timestamp | Não | Data que ocorreu a mudança de fase da indicaçã
 	"message": "Success"
 }
 ```
-
-### Aprovar Indicação
-
-* O método usado será : 
-> POST
-* A URL usada será : 
-> <url_acesso>/referral_program/referral/approve
