@@ -254,15 +254,27 @@ O body deve ser preenchido usando o seguinte padrão:
 	},
 	"referral_share": {
 		"id": "referral_share_id",    
+		"referral_program_id": "referral_program_id",		
 		"member_code": "referral_member_code",            
-		"referral_program_id": "referral_program_id",
 		"stage_internal_id": "stage_internal_id",
-        	"status_lost": "referral_status_lost",
+        	"status_lost_internal_id": "referral_status_lost_internal_id",
         	"details": "referral_details",
         	"createdat": "referral_createdat"
 	}
 }
 ```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+referral_program_id | String | Sim | Chave do programa de indicação. Obtida no método __<url_acesso>/referral_program/all__.
+member_code | String | Sim | Chave do membro. Obtida no método __<url_acesso>/referral_program/members/all__.
+stage_internal_id | String | Sim | Chave da fase. Obtida no método __<url_acesso>/pipelines/stages/?pipeline_internal_id=__.
+status_lost_internal_id | String | Não | Chave do status de perda do negócio via indicação. Obtida no método __<url_acesso>/status_lost/all__.
+details | String | Não | Detalhes sobre o motino do negócio da indicação perdida.
+createdat | Timestamp | Não | Data que ocorreu a mudança de fase da indicação.
 
 #### Retorno
 
