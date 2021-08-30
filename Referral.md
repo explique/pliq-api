@@ -157,7 +157,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "sku": "product_sku",
 	"price": "product_price",
 	"commission_amount": "product_commission_amount",
-	"commission_percentage": "product_commission_amount"
+	"commission_percentage": "product_commission_percentage"
     }
 ] 
 ```
