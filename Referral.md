@@ -294,13 +294,15 @@ O body deve ser preenchido usando o seguinte padrão:
 		"referral_program_id": "referral_program_id",		
 		"member_code": "referral_member_code",            
 		"stage_internal_id": "stage_internal_id",
-        	"status_lost_internal_id": "referral_status_lost_internal_id",
+        	"status_lost_internal_id": "referral_status_lost_internal_id",]
+		"business_name": "referral_business_name",
         	"details": "referral_details",
         	"createdat": "referral_createdat",
 		"products": [{
 			"sku": "product_sku",
 			"price": "product_price",
-			"quantity": "product_quantity"		
+			"quantity": "product_quantity",
+			"total": "product_total"	
 		}]
 	}
 }
@@ -316,12 +318,14 @@ referral_program_id | String | Sim | Chave do programa de indicação. Obtida no
 member_code | String | Sim | Chave do membro. Obtida no método __<url_acesso>/referral_program/member/all__.
 stage_internal_id | String | Sim | Chave da fase. Obtida no método __<url_acesso>/pipeline/stage/?pipeline_internal_id=__.
 status_lost_internal_id | String | Sim* | Em caso de fase onde o negócio foi perdido. Chave do status de perda do negócio via indicação. Obtida no método __<url_acesso>/status_lost/all__.
-details | String | Não | Detalhes sobre o motino do negócio da indicação perdida.
+details | String | Sim* | Em caso de negócio fechado, título do negócio que foi fechado via indicação. Ex. Plano enterprise, Pacote de 500MB de internet.
+details | String | Não | Detalhes sobre o motino do negócio da indicação. Ex. Pacote com disparos de SMS e Whatsapp. Pacote com WiFi incluso.
 createdat | Timestamp | Não | Data que ocorreu a mudança de fase da indicação.
 products | Array<object> | Sim* | Em caso de fase onde onde o negócio foi realizado.
 product_sku | String | Sim* | Código do produto ou serviço que foi realizado o negócio.	
-product_price | String | Sim* | Valor do produto ou serviço que foi realizado o negócio.
-product_quantity | String | Sim* | Quantidade do produto ou serviço que foi realizado o negócio.
+product_price | Decimal | Sim* | Valor do produto ou serviço que foi realizado o negócio.
+product_quantity | Decimal | Sim* | Quantidade do produto ou serviço que foi realizado o negócio.
+product_total | Decimal | Sim* | Total do resultado da quantidade de produtos multiplicado pelo preço que foi realizado o negócio.	
 
 #### Retorno
 
