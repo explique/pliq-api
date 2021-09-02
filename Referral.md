@@ -114,7 +114,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referral_program/member/all
+> <url_acesso>/referral_program/member/all/?month=<month>&year=<year>
 
 Para listar os membros do programas de indicação utilizaremos a seguinte configuração.
 
@@ -156,7 +156,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referral_program/referral/all
+> <url_acesso>/referral_program/referral/all/?month=<month>&year=<year>
 
 Para listar as indicações do programa utilizaremos a seguinte configuração.
 
