@@ -115,6 +115,23 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * A URL usada será : 
 > <url_acesso>/referral_program/member/all
 
+##### Retorno
+
+```
+[
+    {
+        "id": "member_id",
+        "name": "member_name",
+        "email": "member_email",
+        "phone": "member_phone",
+        "register_number": "member_register_number",	
+	"token": "member_token",
+        "status": "member_status",
+        "createdat": "member_createdat"
+    }
+] 
+```
+
 ### Listar Indicações do Programa
 
 * O método usado será : 
