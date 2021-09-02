@@ -115,6 +115,24 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * A URL usada será : 
 > <url_acesso>/referral_program/member/all
 
+Para listar os membros do programas de indicação utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todos os membros do programas de indicação.
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+
 ##### Retorno
 
 ```
@@ -138,6 +156,40 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 > GET
 * A URL usada será : 
 > <url_acesso>/referral_program/referral/all
+
+Para listar as indicações do programas utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todos as indicações do programa.
+
+O body deve ser preenchido usando o seguinte padrão:
+
+```
+{
+    "code": "token_code"
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+
+##### Retorno
+
+```
+[
+    {
+        "id": "referral_id",
+        "name": "referral_name",
+        "participant_key": "referral_participant_key",
+        "name_key": "referral_name_key",
+        "member_token": "member_token",
+        "status": "referral_status",
+        "createdat": "referral_createdat"
+    }
+] 
+```
 
 ### Listar Produtos
 
