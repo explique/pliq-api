@@ -101,6 +101,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "enddate": "referral_enddate",
 	"pipeline": "referral_pipeline",
 	"pipeline_internal_id": "referral_pipeline_internal_id",
+	"form_token": "referral_form_token",
         "language": "referral_language",     
         "url_photo": "referral_url_photo",     
         "url_banner": "referral_url_banner"
@@ -157,7 +158,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * A URL usada será : 
 > <url_acesso>/referral_program/referral/all
 
-Para listar as indicações do programas utilizaremos a seguinte configuração.
+Para listar as indicações do programa utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos as indicações do programa.
 
@@ -186,7 +187,12 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "name_key": "referral_name_key",
         "member_token": "member_token",
         "status": "referral_status",
-        "createdat": "referral_createdat"
+        "createdat": "referral_createdat",
+	"data": [{
+		"id": "data_id",
+		"name": "data_name",
+		"value": "data_value"	
+	}]
     }
 ] 
 ```
