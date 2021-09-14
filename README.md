@@ -144,6 +144,7 @@ O body deve ser preenchido usando o seguinte padrão:
 		"state": "customer_state",
 		"tags": ["tags1", "tags2", "tagsN"]		
 	}],
+	"schedule": "schedule",
 	"schedule_Time": Timestamp_in_seconds,
 	"channels": {
 		"email": bool,
@@ -165,6 +166,7 @@ customers_phone | String | Sim* | Telefone do cliente (obrigatório para transmi
 customers_email | String | Sim* | Email do cliente  (obrigatório para transmissão via email).
 customers_identification | String | Não| Chave de identificação do cliente na sua base de dados.
 customers_state | String | Não | Sigla do estado onde mora o cliente. Exemplo: AM, BA, CE, ..., SP. 
+schedule | Bool | Não | Valor padrão é true, se informado false não gera agendamento de disparo.
 schedule_time | Integer | Não | Tempo que a transmissão será realizada, em segundos no formato timestamp.
 tags | Array<String> | Não | Informe a listagem das Tags.
 channels | Object | Informe os canais que deseja que a transmissão seja realizada, marque true para todas que deseja.	
