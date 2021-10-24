@@ -66,18 +66,16 @@ Segue as seções que você pode acessar pela API
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referralprogram/all
+> <url_acesso>/referralprogram/all?code=token_code
 
 Para listar os programas de indicação utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os programas de indicação.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
