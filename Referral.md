@@ -361,7 +361,8 @@ O body deve ser preenchido usando o seguinte padrão:
         	"status_lost_internal_id": "referral_status_lost_internal_id",
 		"business_title": "referral_business_title",
         	"details": "referral_details",
-        	"createdat": "referral_createdat",
+		"date_closed": "referral_date_closed",
+		"total": "referral_total",
 		"products": [{
 			"sku": "product_sku",
 			"price": "product_price",
@@ -384,8 +385,9 @@ stage_internal_id | String | Sim | Chave da fase. Obtida no método __<url_acess
 status_lost_internal_id | String | Sim* | Em caso de fase onde o negócio foi perdido. Chave do status de perda do negócio via indicação. Obtida no método __<url_acesso>/status_lost/all__.
 business_title | String | Sim* | Em caso de negócio fechado, título do negócio que foi fechado via indicação. Ex. Plano enterprise, Pacote de 500MB de internet.
 details | String | Não | Detalhes sobre o motino do negócio da indicação. Ex. Pacote com disparos de SMS e Whatsapp. Pacote com WiFi incluso.
-createdat | Timestamp | Não | Data que ocorreu a mudança de fase da indicação.
-products | Array<object> | Sim* | Em caso de fase onde onde o negócio foi realizado.
+date_closed | Timestamp | Não | Data que ocorreu a mudança de fase da indicação.
+total | Decimal | Não | Em caso de fase onde o negócio foi realizado.
+products | Array<object> | Sim* | Em caso de fase onde o negócio foi realizado.
 product_sku | String | Sim* | Código do produto ou serviço que foi realizado o negócio.	
 product_price | Decimal | Sim* | Valor do produto ou serviço que foi realizado o negócio.
 product_quantity | Decimal | Sim* | Quantidade do produto ou serviço que foi realizado o negócio.
