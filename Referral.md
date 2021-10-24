@@ -112,18 +112,16 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referralprogram/member/all/?month=<month>&year=<year>
+> <url_acesso>/referralprogram/member/all/?code=token_code&month=<month>&year=<year>
 
 Para listar os membros do programas de indicação utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os membros do programas de indicação.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
@@ -160,12 +158,10 @@ Para listar as indicações do programa utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos as indicações do programa.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
@@ -200,18 +196,16 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/product/all
+> <url_acesso>/product/all?code=token_code
 
 Para listar os produtos utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os produtos.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
@@ -240,18 +234,16 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/pipeline/all
+> <url_acesso>/pipeline/all?code=token_code
 
 Para listar todos os pipelines utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os pipelines.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
@@ -277,18 +269,16 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/pipeline/stage/?pipeline_internal_id=
+> <url_acesso>/pipeline/stage/?code=token_code&pipeline_internal_id=
 
 Para listar as fases de um pipeline utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todas fases de um pipeline.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
@@ -316,18 +306,16 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/status_lost/all
+> <url_acesso>/status_lost/all?code=token_code
 
 Para listar os status de motivo de perda de negócio utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todos os  motivos de perda de negócio.
 
-O body deve ser preenchido usando o seguinte padrão:
+O header deve ser preenchido passando o token_code:
 
 ```
-{
     "code": "token_code"
-}
 ```
 
 Parâmetros 
@@ -353,15 +341,18 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > POST
 * A URL usada será : 
-> <url_acesso>/referralprogram/referral/stage_change
+> <url_acesso>/referralprogram/referral/stage_change?code=token_code
+
+O header deve ser preenchido passando o token_code:
+
+```
+    "code": "token_code"
+```
 
 O body deve ser preenchido usando o seguinte padrão:
 
 ```
 {
-	"token": {
-		"code": "token_code"
-	},
 	"referral_share": {
 		"id": "referral_share_id",    
 		"referral_program_id": "referral_program_id",		
