@@ -97,6 +97,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "enddate": "referral_enddate",
         "url_program": "referral_url_program",
         "enddate": "referral_enddate",
+	"pipeline_id": "referral_pipeline_id",
 	"pipeline": "referral_pipeline",
 	"pipeline_internal_id": "referral_pipeline_internal_id",
 	"form_token": "referral_form_token",
@@ -291,6 +292,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "id": "stage_id",
         "name": "stage_name",
         "internal_id": "stage_internal_id",
+	"pipeline_id": "referral_pipeline_id"
 	"win_probability": "stage_win_probability",
 	"sequence": "stage_sequence"
     }
@@ -349,23 +351,23 @@ O body deve ser preenchido usando o seguinte padrão:
 
 ```
 {
-	"referral_share": {
-		"id": "referral_share_id",    
-		"referral_program_id": "referral_program_id",		
-		"member_code": "referral_member_code",            
-		"stage_internal_id": "stage_internal_id",
-        	"status_lost_internal_id": "referral_status_lost_internal_id",
-		"business_title": "referral_business_title",
-        	"details": "referral_details",
-		"date_closed": "referral_date_closed",
-		"total": "referral_total",
-		"products": [{
-			"sku": "product_sku",
-			"price": "product_price",
-			"quantity": "product_quantity",
-			"total": "product_total"	
-		}]
-	}
+  "id": "referral_share_id",
+  "referral_program_id": "referral_program_id",
+  "member_code": "referral_member_code",
+  "stage_internal_id": "stage_internal_id",
+  "status_lost_internal_id": "referral_status_lost_internal_id",
+  "business_title": "referral_business_title",
+  "details": "referral_details",
+  "date_closed": "referral_date_closed",
+  "total": "referral_total",
+  "products": [
+    {
+      "sku": "product_sku",
+      "price": "product_price",
+      "quantity": "product_quantity",
+      "total": "product_total"
+    }
+  ]
 }
 ```
 
