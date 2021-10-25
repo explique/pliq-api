@@ -75,7 +75,7 @@ Esse método é responsável por listar todos os programas de indicação.
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -122,7 +122,7 @@ Esse método é responsável por listar todos os membros do programas de indica�
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -162,7 +162,7 @@ Esse método é responsável por listar todos as indicações do programa.
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -202,7 +202,7 @@ Esse método é responsável por listar todos os produtos.
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -240,7 +240,7 @@ Esse método é responsável por listar todos os pipelines.
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -275,7 +275,7 @@ Esse método é responsável por listar todas fases de um pipeline.
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -313,7 +313,7 @@ Esse método é responsável por listar todos os  motivos de perda de negócio.
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 Parâmetros 
@@ -344,7 +344,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 O header deve ser preenchido passando o token_code:
 
 ```
-    "code": "token_code"
+"code": "token_code"
 ```
 
 O body deve ser preenchido usando o seguinte padrão:
