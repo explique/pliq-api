@@ -152,7 +152,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/referralprogram/referral/all/?month=<month>&year=<year>
+> <url_acesso>/referralprogram/indicateds?code=token_code
 
 Para listar as indicações do programa utilizaremos a seguinte configuração.
 
@@ -169,6 +169,7 @@ Parâmetros
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+program_id | Number | Sim | Id do programa de indicação
 
 ##### Retorno
 
@@ -181,12 +182,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "name_key": "referral_name_key",
         "member_token": "member_token",
         "status": "referral_status",
-        "createdat": "referral_createdat",
-	"data": [{
-		"id": "data_id",
-		"name": "data_name",
-		"value": "data_value"	
-	}]
+        "createdat": "referral_createdat"
     }
 ] 
 ```
