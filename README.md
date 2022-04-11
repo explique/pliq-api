@@ -360,7 +360,7 @@ Exemplo de retorno:
         "nps_feedback": "nps_feedback",
 	"anonymous": "anonymous",
 	"timezone","timezone",
-	"responses","[fk_question, fk_type_question, answers, data_response]"
+	"responses","[fk_question, value, fk_type_question, answers, data_response]"
     }
 ]
 ```
