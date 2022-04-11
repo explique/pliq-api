@@ -300,6 +300,71 @@ Exemplo de retorno:
 ]
 ```
 
+### Visualizar Respostas em Lote
+Fornecemos também um método de visualização de respostas em lote por período. Esse método pode ser utilizado com os seguintes parâmetros.
+
+O método será: GET
+
+A URL a ser usada deve ser: __<url_acesso>/surveys/feedbacks__
+
+Parâmetros opicionais de cabeçalho, ?days=&startedat=&finishedat=	
+	
+O body deve ser preenchido usando o seguinte padrão
+
+```
+{
+	"token": {
+		"code": "token_code"
+	},
+	"survey": {
+		"code": "survey_code"
+	}
+}
+```
+
+Parâmetros 
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
+days | String | Não* | Quantidade de dias da resposta com base no dia atual.
+startedat | String | Não* | Data de início de respostas.
+finishedat | String | Não* | Data de final de respostas.
+
+Exemplo de retorno:
+```
+[
+    {
+        "id_company": "company_id",
+        "full_name": "company_fullname",
+        "id_survey": "survey_id",
+        "url_survey": "survey_code",
+        "type_survey": "type_survey",
+        "type_survey_label": "type_survey_label",
+        "fk_survey_sample": "type_survey_sample",
+        "title": "survey_title",
+        "description": "survey_description",
+        "id_survey_response": "survey_response_id",
+        "participant_key": "participant_key",
+        "abandonment": "abandonment",
+        "closed_loop": "closes_loop",
+        "name": "contact_name",
+        "name_key": "contact_name_key",
+        "respondedat": "survey_response_data",
+        "createdat": "survey_response_created",
+        "sendedat": "survey_response_send",
+        "tags": "survey_response_tags",
+        "referral_share_code": "referral_share_code",
+        "nps_value": "nps_value",
+        "nps_feedback": "nps_feedback",
+	"anonymous": "anonymous",
+	"timezone","timezone",
+	"responses","[fk_question, fk_type_question, answers, data_response]"
+    }
+]
+```
+	
 ### Inserir Histórico e Fechamento de Loop
 Fornecemos também um método de inserção de históricos e fechamento de loop. Esse método pode ser utilizado com os seguintes parâmetros.
 
