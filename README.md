@@ -322,16 +322,22 @@ O body deve ser preenchido usando o seguinte padrão
 }
 ```
 
-Parâmetros 
+Parâmetros de body
 
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
-survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.	
+	
+Parâmetros de cabeçalho
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
 days | String | Não* | Quantidade de dias da resposta com base no dia atual.
 startedat | String | Não* | Data de início de respostas.
 finishedat | String | Não* | Data de final de respostas.
 
+	
 Exemplo de retorno:
 ```
 [
