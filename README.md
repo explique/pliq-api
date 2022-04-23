@@ -14,7 +14,7 @@ https://api.pliq.io/v1/api (Para clientes ambiente de produção)
 
 ou
 
-https://sandboxpliqapi.azurewebsites.net/v1/api (Para ambiente de sandbox)
+https://sandbox-api.pliq.io/v1/api (Para ambiente de sandbox)
 
 ## Requisição HTTP
 Seguimos a estrutura padrão do estilo RESTful
