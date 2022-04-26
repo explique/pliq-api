@@ -86,3 +86,22 @@ Esse script deve ser colocado dentro de sua página web ou webapp.
 **key** 
 
 É o objeto web dentro de seu sistema web, webapp ou CSM como wordpress. Esse objeto deve conter a informação do email do cliente que normalmente faz login no seu sistema.
+
+*PlugiJS V2*
+
+Estamos disponibilizando uma nova possibilidade de uso do pluginJS que atualmente é FULLSCREEN, nessa nova versão a pesquisa se apresenta no canto inferior direito da página conforme imagem abaixo.
+
+![image](https://user-images.githubusercontent.com/790876/165365038-47e1bb5b-c606-4d46-8019-5bb63db3d681.png)
+
+Para utilizar essa nova versão você deve mudar o seguinte caminho da URL.
+
+```
+<script>
+(function (p, l, i, q, j, s) {
+     p._pliqStt={ surveyUrl: '<Token da sua pesquisa aqui>', key: '<Id do objeto aqui>'};
+     j=l.getElementsByTagName('head')[0];s=l.createElement('script');
+     s.async=1;s.src=i+q.split(';')[0];j.appendChild(s);
+     s=l.createElement('link');s.rel='stylesheet';s.href=i+q.split(';')[1];j.appendChild(s);
+})(window, document, 'https://pliqdrive.blob.core.windows.net/sandbox/App/Plugin/v2/app', '.js;.css');
+</script>
+```
