@@ -93,7 +93,7 @@ Estamos disponibilizando uma nova possibilidade de uso do pluginJS que atualment
 
 ![image](https://user-images.githubusercontent.com/790876/165365038-47e1bb5b-c606-4d46-8019-5bb63db3d681.png)
 
-Para utilizar essa nova versão você deve mudar o seguinte caminho da URL (https://pliqdrive.blob.core.windows.net/pliqdrive/App/Plugin/v2/app).
+Para utilizar essa nova versão você deve mudar o seguinte caminho da URL ```https://pliqdrive.blob.core.windows.net/pliqdrive/App/Plugin/v2/app```.
 
 ```
 <script>
