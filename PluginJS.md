@@ -87,7 +87,7 @@ Esse script deve ser colocado dentro de sua página web ou webapp.
 
 É o objeto web dentro de seu sistema web, webapp ou CSM como wordpress. Esse objeto deve conter a informação do email do cliente que normalmente faz login no seu sistema.
 
-## PlugiJS V2
+## PluginJS V2
 
 Estamos disponibilizando uma nova possibilidade de uso do pluginJS que atualmente é FULLSCREEN, nessa nova versão a pesquisa se apresenta no canto inferior direito da página conforme imagem abaixo.
 
