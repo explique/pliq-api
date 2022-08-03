@@ -429,4 +429,34 @@ Exemplo de retorno:
     "historydat": "Data e hora do registro do histórico",
     "surveyResponses": "Mais informações do feedback",
     "closeLoop": "Informação de fechamento de loop"
-}```
+}
+```
+
+### Listar os tipos de perguntas
+Fornecemos também um método de inserção de históricos e fechamento de loop. Esse método pode ser utilizado com os seguintes parâmetros.
+
+O método será:GET
+
+A URL a ser usada deve ser: __<url_acesso>/typequestions__
+
+O body deve ser preenchido com o token da empresa.
+
+```
+{
+	"token": {
+		"code": "token_code"
+	}
+}	
+```
+
+Exemplo de retorno:
+```
+{
+    "id_type_question": "Chave primária do tipo de pergunta.",
+    "title": "Título do tipo de pergunta",
+    "type_object": "Estrutura de objetos html do tipo de pergunta.",
+    "answers_default": "Lista possíveis respostas padrões do tipo de pergunta.",
+    "notapply": "Boleano para identificar se o tipo de pergunta permite ativar a opção N/A (Não se Aplica).",
+    "notapply_label": "Texto padrão usado para a opção N/A (Não se Aplica)."    
+}
+```
