@@ -77,7 +77,9 @@ O body deve ser preenchido usando o seguinte padrão:
 
 ```
 {
-    "code": "token_code"
+	"token": {
+    		"code": "token_code"
+    	}
 }
 ```
 
