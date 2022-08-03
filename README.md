@@ -100,7 +100,16 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
         "questions": [
             {
                 "title": "question_title",
-                "sequence": "question_sequence"
+                "sequence": "question_sequence",
+		"id_question": "question_id_question",
+		"fk_type_question": "question_fk_type_question",
+		"low_score_label": "question_low_score_label",
+		"high_score_label": "question_high_score_label",
+		"required": "question_required",
+		"title_neutral": "question_title_neutral",
+		"title_detractor": "question_title_detractor",
+		"answers": "question_answers",
+		"answersOBJ": "question_answersOBJ"
             }
         ]
     }
