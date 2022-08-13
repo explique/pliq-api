@@ -17,12 +17,15 @@ ou
 https://sandbox-api.pliq.io/v1/api (Para ambiente de sandbox)
 
 ## Requisição HTTP
-Seguimos a estrutura padrão do estilo RESTful
+A API da PliQ utiliza o padrão REST através do protocolo HTTPS. Os métodos variam de acordo com a função utilizada:
 
-GET: lista ou consulta dados
-POST: criação de dados
-PUT: atualização de dados
-DELETE: remoção de dados
+Método | Ação
+------------ | ------------- 
+GET | lista ou consulta dados 
+POST | criação de dados 
+PUT / PATCH | atualização de dados 
+DELETE | remoção de dados 
+
 Dica: quando estiver listando, você pode escolher os campos que deseja trazer enviando o parâmetro "attribute" na URL.
 
 ### Como autenticar
@@ -30,20 +33,15 @@ Dica: quando estiver listando, você pode escolher os campos que deseja trazer e
 
 ### Códigos de respostas
 
-* 200 (application/json)
-> Sucesso
-
-* 401 (text/json)
-> Algum parâmetro enviado errado
-
-* 403 (text/json)
-> Acesso negado
-
-* 404 (text/json)
-> Registro não encontrado
-
-* 500 (text/json)
-> Erro do servidor
+Código | Status | Descrição
+------------ | ------------- | -------------
+200 | OK | Sua requisição foi bem sucedida
+400 | Bad Request | Algum parâmetro obrigatório não foi enviado ou é inválido. Neste caso a própria resposta indicará qual é o problema.
+401 | Unauthorized | Não foi enviada Napikey ou ela é inválida. Verifique as credenciais de autenticação da requisição.
+404 | Not Found | O endpoint ou o objeto solicitado não existe.
+403 | Forbidden | Requisição não autorizada ou uso de parâmetros não permitidos podem gerar este código.
+429 | Too Many Requests | Muitas requisições em um determinado período de tempo.
+500 | Internal Server Error | Algo deu errado no servidor.
 
 ### Padrão de endpoints
 
