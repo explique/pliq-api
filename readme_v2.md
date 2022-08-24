@@ -75,7 +75,7 @@ Parâmetros header
 
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
-token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+pliq_token | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
 	
 Parâmetros de cabeçalho
 
