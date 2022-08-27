@@ -85,7 +85,7 @@ survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>
 days | String | Não* | Quantidade de dias da resposta com base no dia atual.
 startedat | String | Não* | Data de início de respostas.
 finishedat | String | Não* | Data de final de respostas.
-withcontact | Boo | Não* | Ao ativar com true o endpoint inclui os dados do contato que deixou a resposta.
+withcontact | Bool | Não* | Ao ativar com true o endpoint inclui os dados do contato que deixou a resposta.
 
 	
 Exemplo de retorno:
