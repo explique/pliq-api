@@ -67,9 +67,7 @@ O método será: GET
 
 A URL a ser usada deve ser: __<url_acesso>/surveys/feedbacks__
 
-Parâmetros opicionais de cabeçalho, ?survey_code=&days=&startedat=&finishedat=	
-	
-O body deve ser preenchido usando o seguinte padrão
+Parâmetros opicionais de cabeçalho, ?survey_code=&days=&startedat=&finishedat=&withcontact=	
 
 Parâmetros header
 
@@ -85,7 +83,7 @@ survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>
 days | String | Não* | Quantidade de dias da resposta com base no dia atual.
 startedat | String | Não* | Data de início de respostas.
 finishedat | String | Não* | Data de final de respostas.
-withcontact | Bool | Não* | Ao ativar com true o endpoint inclui os dados do contato que deixou a resposta.
+withcontact | Boolean | Não* | Ao ativar com true o endpoint inclui os dados do contato que deixou a resposta.
 
 	
 Exemplo de retorno:
@@ -138,9 +136,9 @@ Exemplo de retorno:
 		"complement": null,
 		"properties": [{
 			"id_property": 1,
-			"name_property": "Tipo da Equipe",
-			"internal_name": "equipe_tipo",
-			"value": "Venda"
+			"name_property": "Name of property",
+			"internal_name": "name_property",
+			"value": "Value of property"
 		}]
 	}
     }
