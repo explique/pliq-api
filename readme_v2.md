@@ -81,10 +81,11 @@ Parâmetros de cabeçalho
 
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
-survey_code | String | Não | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.	
+survey_code | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.	
 days | String | Não* | Quantidade de dias da resposta com base no dia atual.
 startedat | String | Não* | Data de início de respostas.
 finishedat | String | Não* | Data de final de respostas.
+withcontact | Boo | Não* | Ao ativar com true o endpoint inclui os dados do contato que deixou a resposta.
 
 	
 Exemplo de retorno:
@@ -115,7 +116,33 @@ Exemplo de retorno:
         "nps_feedback": "nps_feedback",
 	"anonymous": "anonymous",
 	"timezone","timezone",
-	"responses","[fk_question, value, fk_type_question, answers, data_response]"
+	"responses","[fk_question, value, fk_type_question, answers, data_response]",
+	"contact": {
+		"id_contact": 50450,
+		"first_name": "My first Name",
+		"last_name": "My Last Name",
+		"register_number": "111.222.333-44",
+		"phone": "+551199889988",
+		"phone_extra": "+551134445532",
+		"email": "meuemail@minhaempresa.com",
+		"website": null,
+		"code_contact_client": null,
+		"segment": null,
+		"country": null,
+		"region": null,
+		"state": null,
+		"city": null,
+		"neighborhood": null,
+		"address": null,
+		"cep": null,
+		"complement": null,
+		"properties": [{
+			"id_property": 1,
+			"name_property": "Tipo da Equipe",
+			"internal_name": "equipe_tipo",
+			"value": "Venda"
+		}]
+	}
     }
 ]
 ```
