@@ -65,17 +65,19 @@ Segue as seções que você pode acessar pela API
 * O método usado será : 
 > GET
 * A URL usada será : 
-> <url_acesso>/surveys?survey_code=code
+> <url_acesso>/surveys
+
+Parâmetros opcionais de cabeçalho, ?survey_code=
 
 Para listar as pesquisas utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todas as pesquisas, seus códigos e alguns detalhes, como por exemplo as perguntas usadas.
 
-Parâmetros 
+Parâmetros de cabeçalho
 
-Parâmetro | Obrigatório | Descrição
------------- | ------------- | ------------
-survey_code | Não | Código do token da pesquisa para realização do filtro individual. 
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+survey_code | String | Sim | Chave da pesquisa.
 
 ##### Retorno
 
@@ -133,7 +135,7 @@ O método será: GET
 
 A URL a ser usada deve ser: __<url_acesso>/surveys/feedbacks__
 
-Parâmetros opicionais de cabeçalho, ?survey_code=&days=&startedat=&finishedat=&withcontact=	
+Parâmetros opcionais de cabeçalho, ?survey_code=&days=&startedat=&finishedat=&withcontact=	
 
 Parâmetros header
 
