@@ -60,6 +60,71 @@ A requisição deve conter no Header:
 
 Segue as seções que você pode acessar pela API
 
+### Listar Pesquisas
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/surveys?survey_code=code
+
+Para listar as pesquisas utilizaremos a seguinte configuração.
+
+Esse método é responsável por listar todas as pesquisas, seus códigos e alguns detalhes, como por exemplo as perguntas usadas.
+
+Parâmetros 
+
+Parâmetro | Obrigatório | Descrição
+------------ | ------------- | ------------
+survey_code | Não | Código do token da pesquisa para realização do filtro individual. 
+
+##### Retorno
+
+```
+[
+    {
+        "title": "survey_title",
+        "description": "survey_description",
+        "code": "survey_code",
+        "active": "survey_active",
+        "createdat": "survey_createdat",
+        "questions": [
+            {
+                "title": "question_title",
+                "sequence": "question_sequence",
+		"id_question": "question_id_question",
+		"fk_type_question": "question_fk_type_question",
+		"low_score_label": "question_low_score_label",
+		"high_score_label": "question_high_score_label",
+		"required": "question_required",
+		"title_neutral": "question_title_neutral",
+		"title_detractor": "question_title_detractor",
+		"answers": "question_answers",
+		"answersOBJ": "question_answersOBJ"
+            }
+        ]
+    }
+] 
+```
+
+### Listar os tipos de perguntas
+Fornecemos também um método que lista os tipos de perguntas.
+
+O método será:GET
+
+A URL a ser usada deve ser: __<url_acesso>/typequestions__
+
+Exemplo de retorno:
+```
+{
+    "id_type_question": "Chave primária do tipo de pergunta.",
+    "title": "Título do tipo de pergunta",
+    "type_object": "Estrutura de objetos html do tipo de pergunta.",
+    "answers_default": "Lista possíveis respostas padrões do tipo de pergunta.",
+    "notapply": "Boleano para identificar se o tipo de pergunta permite ativar a opção N/A (Não se Aplica).",
+    "notapply_label": "Texto padrão usado para a opção N/A (Não se Aplica)."    
+}
+```
+
 ### Visualizar Respostas em Lote
 Fornecemos também um método de visualização de respostas em lote por período. Esse método pode ser utilizado com os seguintes parâmetros.
 
