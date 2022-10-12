@@ -109,9 +109,10 @@ survey_code | Não | Código do token da pesquisa para realização do filtro in
 ### Listar os tipos de perguntas
 Fornecemos também um método que lista os tipos de perguntas.
 
-O método será:GET
-
-A URL a ser usada deve ser: __<url_acesso>/typequestions__
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/typequestions
 
 Exemplo de retorno:
 ```
