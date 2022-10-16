@@ -213,3 +213,17 @@ Exemplo de retorno:
 ]
 ```
 	
+### Base legal
+Em conformidade com a LGPD nossa API de importação de contatos solicita que o nosso cliente informe qual é a base legal que está sendo utilizada.
+
+Em resumo, as chamadas bases legais, são por que sua empresa poderá realizar o tratamento dos dados pessoais de terceiros. Conhecê-las é uma forma de entender como a LGPD funciona e como as organizações e negócios sociais precisam se adaptar para atender às determinações da Lei. 
+
+Código | Base Legal | Detalhes
+------------ | ------------- | -------------
+0 | Consentimento | Quando uma pessoa consente com o tratamento dos seus dados, de forma livre, inequívoca e informada.
+1 | Legítimo interesse | Quando a empresa possui um interesse legítimo para o processamento e a utilização dos dados está dentro das expectativas da pessoa, não sendo necessário obter consentimento.
+2 | Contrato pré-existente | Quando os dados pessoais são processados por obrigação contratual ou para a validação e início de vigência de um acordo.
+3 | Não sei dizer/Não possui base legal | Quando o tratamento de dados pessoais é justificável por Lei.
+4 | Obrigação Legal, Processo Judicial ou Proteção ao crédito | Quando o tratamento de dados pessoais é feito com o intuito de proteger a vida, seja do titular do dado ou ainda de outra pessoa.
+5 | Interesse vital ou Tutela da saúde | Muitas requisições em um determinado período de tempo.
+6 | Interesse público | Quando o tratamento de dados pessoais é resguardado pelo interesse público ou por necessidade de uma autoridade oficial.
