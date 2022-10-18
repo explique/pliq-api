@@ -227,3 +227,92 @@ Código | Base Legal | Detalhes
 4 | Obrigação Legal, Processo Judicial ou Proteção ao crédito | Quando o tratamento de dados pessoais é feito com o intuito de proteger a vida, seja do titular do dado ou ainda de outra pessoa.
 5 | Interesse vital ou Tutela da saúde | Muitas requisições em um determinado período de tempo.
 6 | Interesse público | Quando o tratamento de dados pessoais é resguardado pelo interesse público ou por necessidade de uma autoridade oficial.
+
+### Importar contatos
+Fornecemos também um método que importa contatos e já envia para uma jornada ou realiza agendamento da pesquisa para a listagem.
+
+* O método usado será : 
+> POR
+* A URL usada será : 
+> <url_acesso>/import
+
+Parâmetros header
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+pliq_token | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+	
+Parâmetros Body
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+nameImport | String | Sim | Nome da importação, descreva com um título a listagem dessa pesquisa.
+url_survey | String | Não | Chave da pesquisa. Obtida no método __<url_acesso>/surveys__.
+update_import | Int | Sim | Informe o que fazer em caso de contato duplicado conforme instruções acima.
+baseLegal | Int | Sim | Informe a base legal conforme instruções acima.
+date_scheduling | String | Não | Em caso de agendamento da pesquisa, informar quando será a data e hora do envio.
+Customers | Object | Sim | Lista de objetos do tipo customers.
+flg_email | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de email.
+flg_popup | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de popup.
+flg_whatsapp | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de whatsapp.
+flg_sms | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de sms.
+
+
+Exemplo de retorno:
+```
+{
+    {
+	"nameImport": null,
+	"url_survey": null,
+	"update_import": null,
+	"baseLegal": null,
+	"date_scheduling": null,
+	"customers": [
+	{
+		"name": null,
+		"email": null,
+		"phone": null,
+		"identification": null,
+		"state": null,
+		"tags": null,
+		"segments": null,
+		"enterprise": null,
+		"register_number": null,
+		"comments": null,
+		"key_attendance": null,
+		"ticket_media": null,
+		"start_contract": null,
+		"last_name": null,
+		"logo_url": null,
+		"phone_extra": null,
+		"website": null,
+		"code_contact_client": null,
+		"segment": null,
+		"country": null,
+		"region": null,
+		"city": null,
+		"neighborhood": null,
+		"address": null,
+		"cep": null,
+		"complement": null,
+		"number": null,
+		"latitude": null,
+		"longitude": null,
+		"start_contact": null,
+		"end_contact": null,
+		"profile_linkedin": null,
+		"profile_facebook": null,
+		"profile_twitter": null,
+		"profile_instagram": null
+	]
+	}
+	],
+		"flg_email": false,
+		"flg_popup": false,
+		"flg_whatsapp": false,
+		"flg_sms": false
+	}    
+}
+```
+
+
