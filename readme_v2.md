@@ -238,7 +238,7 @@ Código | Base Legal | Detalhes
 1 | Ignorar | Ignorar o novo registro e manter o existente intacto.
 2 | Atualizar | Atualizar o contato existente com as mudanças ou novos campos.
 
-### Importar contatos
+# Importar contatos
 Fornecemos também um método que importa contatos e já envia para uma jornada ou realiza agendamento da pesquisa para a listagem.
 
 * O método usado será : 
