@@ -251,67 +251,84 @@ url_survey | String | Não | Chave da pesquisa. Obtida no método __<url_acesso>
 update_import | Int | Sim | Informe o que fazer em caso de contato duplicado conforme instruções acima.
 baseLegal | Int | Sim | Informe a base legal conforme instruções acima.
 date_scheduling | String | Não | Em caso de agendamento da pesquisa, informar quando será a data e hora do envio.
-Customers | Object | Sim | Lista de objetos do tipo customers.
+Customers | List[Customer] | Sim | Lista de objetos do tipo customers.
 flg_email | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de email.
 flg_popup | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de popup.
 flg_whatsapp | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de whatsapp.
 flg_sms | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de sms.
 
+Objeto Customer
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+name | String | Sim | Nome da importação, descreva com um título a listagem dessa pesquisa.
+email | String | Sim* | Email do contato. Em caso de mais de um email separar por ";"
+phone | String | Sim* | Telefone do contato, usar padrão internacional com DDI. Ex. 5511988887777. Em caso de mais de um email separar por ";"
+identification | String | Não | Número de identificação do contato em seu CRM ou ERP.
+tags | Array | Não | Informe a listagem das Tags.
+segment | String | Não | Nome do segmento que o contato pertence.
+enterprise | String | Não | Nome da empresa do contato.
+register_number | String | Não | Número de CPF do contato.
+comments | String | Não | Comentários extras do atendimento.
+key_attendance | String | Não | Número de um atendimento/protocolo que o contato foi atendido.
+ticket_media | Decimal | Não | Ticket médio do contato mensal.
+start_contract | String | Não | Data de início do primeiro contrato do contato.
+last_name | String | Não | Sobrenome do contato.
+country | String | Não | País do endereço do contato.
+region | String | Não | Região do endereço do contato.
+city | String | Não | Cidade do endereço do contato.
+neighborhood | String | Não | Bairro do endereço do contato.
+address | String | Não | Rua/Avenida do endereço do contato.
+cep | String | Não | Cep do endereço do contato.
+complement | String | Não | Complemento do endereço do contato.
+number | String | Não | Número do endereço do contato.
+profile_linkedin | String | Não | Link para o linkedin do contato.
+profile_facebook | String | Não | Link para o facebook do contato.
+profile_twitter | String | Não | Link para o twitter do contato.
+profile_instagram | String | Não | Link para o instagram do contato.
 
 Exemplo de retorno:
 ```
 {
-    {
-	"nameImport": null,
-	"url_survey": null,
-	"update_import": null,
-	"baseLegal": null,
-	"date_scheduling": null,
-	"customers": [
-	{
-		"name": null,
-		"email": null,
-		"phone": null,
-		"identification": null,
-		"state": null,
-		"tags": null,
-		"segments": null,
-		"enterprise": null,
-		"register_number": null,
-		"comments": null,
-		"key_attendance": null,
-		"ticket_media": null,
-		"start_contract": null,
-		"last_name": null,
-		"logo_url": null,
-		"phone_extra": null,
-		"website": null,
-		"code_contact_client": null,
-		"segment": null,
-		"country": null,
-		"region": null,
-		"city": null,
-		"neighborhood": null,
-		"address": null,
-		"cep": null,
-		"complement": null,
-		"number": null,
-		"latitude": null,
-		"longitude": null,
-		"start_contact": null,
-		"end_contact": null,
-		"profile_linkedin": null,
-		"profile_facebook": null,
-		"profile_twitter": null,
-		"profile_instagram": null
-	]
-	}
-	],
-		"flg_email": false,
-		"flg_popup": false,
-		"flg_whatsapp": false,
-		"flg_sms": false
-	}    
+   "nameImport":null,
+   "url_survey":null,
+   "update_import":null,
+   "baseLegal":null,
+   "date_scheduling":null,
+   "customers":[
+      {
+         "name":null,
+         "email":null,
+         "phone":null,
+         "identification":null,
+         "state":null,
+         "tags":null,
+         "segment":null,
+         "enterprise":null,
+         "register_number":null,
+         "comments":null,
+         "key_attendance":null,
+         "ticket_media":null,
+         "start_contract":null,
+         "last_name":null,
+         "country":null,
+         "region":null,
+         "city":null,
+         "neighborhood":null,
+         "address":null,
+         "cep":null,
+         "complement":null,
+         "number":null,
+         "profile_linkedin":null,
+         "profile_facebook":null,
+         "profile_twitter":null,
+         "profile_instagram":null
+      }
+   ],
+   "flg_email":false,
+   "flg_popup":false,
+   "flg_whatsapp":false,
+   "flg_sms":false
 }
 ```
 
