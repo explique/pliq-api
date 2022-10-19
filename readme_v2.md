@@ -287,7 +287,7 @@ profile_facebook | String | Não | Link para o facebook do contato.
 profile_twitter | String | Não | Link para o twitter do contato.
 profile_instagram | String | Não | Link para o instagram do contato.
 
-Exemplo de retorno:
+Exemplo de Body:
 ```
 {
    "nameImport":null,
@@ -329,6 +329,13 @@ Exemplo de retorno:
    "flg_popup":false,
    "flg_whatsapp":false,
    "flg_sms":false
+}
+```
+
+Exemplo de retorno:
+```
+{
+	"message": "Import being carried out!"
 }
 ```
 
