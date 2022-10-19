@@ -242,7 +242,7 @@ Código | Base Legal | Detalhes
 Fornecemos também um método que importa contatos e já envia para uma jornada ou realiza agendamento da pesquisa para a listagem.
 
 * O método usado será : 
-> POR
+> POST
 * A URL usada será : 
 > <url_acesso>/import
 
