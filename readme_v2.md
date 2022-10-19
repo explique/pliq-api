@@ -228,6 +228,16 @@ Código | Base Legal | Detalhes
 5 | Interesse vital ou Tutela da saúde | Muitas requisições em um determinado período de tempo.
 6 | Interesse público | Quando o tratamento de dados pessoais é resguardado pelo interesse público ou por necessidade de uma autoridade oficial.
 
+### Update Import
+Em casos onde o contato já exista na base de dados de sua empresa o que deverá acontecer.
+
+Em resumo, podem ser ignoradas ou atualizadas as novas informações no contato.
+
+Código | Base Legal | Detalhes
+------------ | ------------- | -------------
+1 | Ignorar | Ignorar o novo registro e manter o existente intacto.
+2 | Atualizar | Atualizar o contato existente com as mudanças ou novos campos.
+
 ### Importar contatos
 Fornecemos também um método que importa contatos e já envia para uma jornada ou realiza agendamento da pesquisa para a listagem.
 
