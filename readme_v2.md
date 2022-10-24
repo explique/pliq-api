@@ -275,7 +275,7 @@ name | String | Sim | Nome da importação, descreva com um título a listagem d
 email | String | Sim* | Email do contato. Em caso de mais de um email separar por ";"
 phone | String | Sim* | Telefone do contato, usar padrão internacional com DDI. Ex. 5511988887777. Em caso de mais de um email separar por ";"
 identification | String | Não | Número de identificação do contato em seu CRM ou ERP.
-tags | Array | Não | Informe a listagem das Tags.
+tagsCustomer | Array | Não | Informe a listagem das Tags.
 segment | String | Não | Nome do segmento que o contato pertence.
 enterprise | String | Não | Nome da empresa do contato.
 register_number | String | Não | Número de CPF do contato.
@@ -312,7 +312,7 @@ Exemplo de Body:
          "phone":null,
          "identification":null,
          "state":null,
-         "tags":null,
+         "tagsCustomer":null,
          "segment":null,
          "enterprise":null,
          "register_number":null,
