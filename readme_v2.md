@@ -349,7 +349,7 @@ Exemplo de retorno:
 }
 ```
 
-### Inserir Respostas
+### Inserir Resposta
 Fornecemos também um método de inserção de resposta. Esse método pode ser utilizado com os seguintes parâmetros.
 
 * O método usado será : 
@@ -369,8 +369,8 @@ Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 url_survey | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys__.
 name | String | Sim* | Nome do contato que respondeu a pesquisa.
-participant_key | String | Sim* | Chave de email ou telefone do contato que respondeu a pesquisa.
-responses | Array[Response] | Sim | Lista das respostas por pergunta.
+participant_key | String | Sim* | Email ou telefone do contato que respondeu a pesquisa.
+responses | Array[Response] | Sim | Lista das respostas das perguntas da pesquisa.
 tags | Array[String] | Não | Informe a listagem das Tags.
 respondedat | String | Sim | Data/hora da resposta no padrão timestamp.
 anonymous | Boolean | Não | Identifica se a resposta será anonima.
