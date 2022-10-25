@@ -349,4 +349,70 @@ Exemplo de retorno:
 }
 ```
 
+### Inserir Respostas
+Fornecemos também um método de inserção de resposta. Esse método pode ser utilizado com os seguintes parâmetros.
+
+* O método usado será : 
+> POST
+* A URL usada será : 
+> <url_acesso>/answer
+
+Parâmetros header
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+pliq_token | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+	
+Parâmetros Body
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+url_survey | String | Sim | Chave da pesquisa. Obtida no método __<url_acesso>/surveys__.
+name | String | Sim* | Nome do contato que respondeu a pesquisa.
+participant_key | String | Sim* | Chave de email ou telefone do contato que respondeu a pesquisa.
+responses | Array[Response] | Sim | Lista das respostas por pergunta.
+tags | Array[String] | Não | Informe a listagem das Tags.
+respondedat | String | Sim | Data/hora da resposta no padrão timestamp.
+anonymous | Boolean | Não | Identifica se a resposta será anonima.
+
+Objeto Response
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+fk_question | Integer | Sim | Chave que identifica a pergunta da pesquisa.
+value | String | Sim | Valor da resposata do cliente.
+fk_type_question | Integer | Sim | Chave que identifica o tipo de pergunta.
+
+```
+{
+    "url_survey": "url_survey",
+    "name": "name",
+    "participant_key": "participant_key",
+    "responses": [
+        {
+            "fk_question": fk_question,
+            "value": "value",
+            "fk_type_question": fk_type_question
+        }
+    ],
+    "tags": ["tags1", "tags2", "tagsN"],
+    "respondedat": "respondedat",
+    "anonymous": anonymous
+}
+```
+
+Exemplo de retorno: 200
+```
+{
+	"message": "Answer saved successfully!"
+}
+```
+
+
+Exemplo de retorno [Erro]: Código da question ou do fk_type_question não localizado.
+```
+{
+	"error": "Responses not populated correctly: non-existent fk_question / fk_type_question."
+}
+```
 
