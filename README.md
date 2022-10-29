@@ -54,7 +54,6 @@ Para inserção, use POST: /endpoint/
 A requisição deve conter:
 
 * Content-Type: application/json
-* Access-Token: SEU_TOKEN_AQUI
 
 ### Seções (endpoints) disponíveis
 
@@ -67,6 +66,14 @@ Segue as seções que você pode acessar pela API
 * A URL usada será : 
 > <url_acesso>/surveys/all
 
+Parâmetros opcionais de cabeçalho, ?showquestionsdeleted=
+
+Parâmetros de cabeçalho
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+showquestionsdeleted | Bool | Não | Em caso de true o endpoint irá mostrar as perguntas que foram deletadas.
+
 Para listar as pesquisas utilizaremos a seguinte configuração.
 
 Esse método é responsável por listar todas as pesquisas, seus códigos e alguns detalhes, como por exemplo as perguntas usadas.
@@ -77,7 +84,10 @@ O body deve ser preenchido usando o seguinte padrão:
 {
 	"token": {
     		"code": "token_code"
-    	}
+    	},
+	"survey": {
+		"code": "survey_code"
+	}
 }
 ```
 
@@ -86,6 +96,7 @@ Parâmetros
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 token_code | String | Sim | Chave do token da empresa. Obtida na tela de integrações.
+survey_code | String | Não | Chave da pesquisa. Obtida no método __<url_acesso>/surveys/all__.
 
 ##### Retorno
 
@@ -109,6 +120,7 @@ token_code | String | Sim | Chave do token da empresa. Obtida na tela de integra
 		"title_neutral": "question_title_neutral",
 		"title_detractor": "question_title_detractor",
 		"answers": "question_answers",
+		"deletedat": "deletedat",		
 		"answersOBJ": "question_answersOBJ"
             }
         ]
