@@ -67,7 +67,7 @@ Segue as seções que você pode acessar pela API
 * A URL usada será : 
 > <url_acesso>/surveys
 
-Parâmetros opcionais de cabeçalho, ?survey_code=
+Parâmetros opcionais de cabeçalho, ?survey_code=&showquestionsdeleted=
 
 Para listar as pesquisas utilizaremos a seguinte configuração.
 
@@ -78,6 +78,7 @@ Parâmetros de cabeçalho
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 survey_code | String | Sim | Chave da pesquisa.
+showquestionsdeleted | Bool | Não | Em caso de true o endpoint irá mostrar as perguntas que foram deletadas.
 
 ##### Retorno
 
@@ -101,6 +102,7 @@ survey_code | String | Sim | Chave da pesquisa.
 		"title_neutral": "question_title_neutral",
 		"title_detractor": "question_title_detractor",
 		"answers": "question_answers",
+		"deletedat": "deletedat",
 		"answersOBJ": "question_answersOBJ"
             }
         ]
