@@ -351,6 +351,62 @@ Exemplo de retorno:
 }
 ```
 
+### Objetos
+Listagem dos objetos que possuem propriedades.
+
+Código | Nome | Detalhes
+------------ | ------------- | -------------
+1 | Local | Ignorar o novo registro e manter o existente intacto.
+2 | Pesquisa | Propriedades do objeto Pesquisa.
+3 | Parceiro | Propriedades do objeto Parceiro [Vendas por indicação].
+4 | Resposta | Propriedades do objeto Resposta.
+5 | Contato | Propriedades do objeto Contato.
+
+### Tipos de propriedades
+Listagem dos tipos de propriedades.
+
+Código | Nome | Detalhes
+------------ | ------------- | -------------
+1 | Texto | Propriedade que captura dados no formato de texto.
+2 | Boleano | Propriedade que captura dados no formato boleano [True/False].
+3 | Número | Propriedade que captura dados no formato de número.
+4 | Data | Propriedade que captura dados no formato de data.
+5 | Data e Hora | Propriedade que captura dados no formato de data e hora.
+
+### Listar as propriedades da company [Property]
+Fornecemos também um método que lista as propriedades dos objetos da sua empresa.
+
+* O método usado será : 
+> GET
+* A URL usada será : 
+> <url_acesso>/properties
+
+Parâmetros opcionais de cabeçalho, ?fk_object=
+
+Parâmetros de cabeçalho
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+fk_object | Int | Não | Chave da objeto.
+
+Exemplo de retorno:
+```
+[
+	{
+		"id_property": "id_property",
+		"fk_type_property": "fk_type_property",
+		"fk_company": "fk_company",
+		"fk_object": "fk_object,
+		"label": "label",
+		"description": "description",
+		"group_name": "group_name",
+		"internal_name": "internal_name",
+		"read_only": "read_only",
+		"sequence": "sequence"
+	}
+]
+```
+
 ### Inserir Resposta
 Fornecemos também um método de inserção de resposta. Esse método pode ser utilizado com os seguintes parâmetros.
 
@@ -375,15 +431,24 @@ participant_key | String | Sim* | Email ou telefone do contato que respondeu a p
 responses | Array[Response] | Sim | Lista das respostas das perguntas da pesquisa.
 tags | Array[String] | Não | Informe a listagem das Tags.
 respondedat | String | Sim | Data/hora da resposta no padrão timestamp.
-anonymous | Boolean | Não | Identifica se a resposta será anonima.
+anonymous | Boolean | Não | Identifica se a resposta será anônima.
+properties | Array[Property] | Não | Lista das propriedades para essa resposta.
 
 Objeto Response
 
 Parâmetro | Tipo | Obrigatório | Descrição
 ------------ | ------------- | ------------ | -------------
 fk_question | Integer | Sim | Chave que identifica a pergunta da pesquisa.
-value | String | Sim | Valor da resposata do cliente.
+value | String | Sim | Valor da resposta do cliente.
 fk_type_question | Integer | Sim | Chave que identifica o tipo de pergunta.
+
+Objeto Property
+
+Parâmetro | Tipo | Obrigatório | Descrição
+------------ | ------------- | ------------ | -------------
+id_property | Integer | Sim | Chave que identifica a propriedade.
+value | String | Sim | Valor da propriedade.
+
 
 ```
 {
@@ -399,7 +464,13 @@ fk_type_question | Integer | Sim | Chave que identifica o tipo de pergunta.
     ],
     "tags": ["tags1", "tags2", "tagsN"],
     "respondedat": "respondedat",
-    "anonymous": anonymous
+    "anonymous": anonymous,
+    "properties": [
+        {
+            "id_property": "id_property",
+            "value": "value"
+        }
+    ]
 }
 ```
 
