@@ -432,7 +432,7 @@ responses | Array[Response] | Sim | Lista das respostas das perguntas da pesquis
 tags | Array[String] | Não | Informe a listagem das Tags.
 respondedat | String | Sim | Data/hora da resposta no padrão timestamp.
 anonymous | Boolean | Não | Identifica se a resposta será anônima.
-properties | Array[Property] | Não | Lista das propriedades para essa resposta.
+properties | Array[Property] | Não | Lista das propriedades do objeto [Pesquisa] para essa resposta.
 
 Objeto Response
 
