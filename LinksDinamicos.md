@@ -33,12 +33,12 @@ Exemplo:
 
 https://app.pliq.io/survey-response/<token_pesquisa> (Para clientes ambiente de produção)
 
-https://app.pliq.io/survey-response/XXXXX?n=Nome do cliente&k=11967660992&t=PliQ;Empresa;Tecnologia
+https://app.pliq.io/survey-response/XXXXX?n=NomeCliente&k=11967660992&t=PliQ;Empresa;Tecnologia
 
 ou
 
 https://sandbox.pliq.io/survey-response/<tokenpesquisa> (Para ambiente de sandbox)
 
-https://sandbox.pliq.io/survey-response/XXXXX?n=Nome do cliente&k=11967660992&t=PliQ;Empresa;Tecnologia
+https://sandbox.pliq.io/survey-response/XXXXX?n=NomeCliente&k=11967660992&t=PliQ;Empresa;Tecnologia
   
   
