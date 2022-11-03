@@ -263,7 +263,8 @@ url_survey | String | Não | Chave da pesquisa. Obtida no método __<url_acesso>
 update_import | Int | Sim | Informe o que fazer em caso de contato duplicado conforme instruções acima.
 baseLegal | Int | Sim | Informe a base legal conforme instruções acima.
 date_scheduling | String | Não | Em caso de agendamento da pesquisa, informar quando será a data e hora do envio.
-Customers | List[Customer] | Sim | Lista de objetos do tipo customers.
+fk_journey| Int | Não | Chave da jornada automatizada que os contatos serão incluídos. [Solicitar a tech da pliq o ID]
+Customers | List[Customer] | Sim | Lista de objetos do tipo contatos.
 flg_email | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de email.
 flg_popup | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de popup.
 flg_whatsapp | Boolean | Não | Identifica se será utilizado o envio de pesquisa no canal de whatsapp.
@@ -307,6 +308,7 @@ Exemplo de Body:
    "update_import":null,
    "baseLegal":null,
    "date_scheduling":null,
+   "fk_journey":null,
    "customers":[
       {
          "name":null,
