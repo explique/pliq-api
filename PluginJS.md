@@ -74,7 +74,7 @@ Esse script deve ser colocado dentro de sua página web ou webapp.
      j=l.getElementsByTagName('head')[0];s=l.createElement('script');
      s.async=1;s.src=i+q.split(';')[0];j.appendChild(s);
      s=l.createElement('link');s.rel='stylesheet';s.href=i+q.split(';')[1];j.appendChild(s);
-})(window, document, 'https://pliqdrive.blob.core.windows.net/sandbox/App/Plugin/app', '.js;.css');
+})(window, document, 'https://pliqdrive.blob.core.windows.net/pliqdrive/App/Plugin/app', '.js;.css');
 </script>
 ```
 
